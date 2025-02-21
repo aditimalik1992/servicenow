@@ -1,0 +1,45 @@
+<xml>
+<sys_script_client>
+<active>true</active>
+<applies_extended>false</applies_extended>
+<condition/>
+<description/>
+<field>max_duration</field>
+<global>true</global>
+<isolate_script>false</isolate_script>
+<messages>The maximum duration must be between 5 and 2,592,000 seconds (30 days)</messages>
+<name>Maximum Duration Range Check</name>
+<order/>
+<script>
+<![CDATA[ function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    var impact = g_form.getValue('impact');
+    if (impact !== oldValue) {
+        g_form.setValue('priority', '1');
+    }
+} ]]>
+</script>
+<sys_class_name>sys_script_client</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2025-02-07 19:27:03</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_domain_path/>
+<sys_id>0014099c3711200024d1973ebebe5dbe</sys_id>
+<sys_mod_count>6</sys_mod_count>
+<sys_name>Maximum Duration Range Check</sys_name>
+<sys_overrides/>
+<sys_package display_value="Transaction Quotas" source="com.glide.quota">8bc46c8693211210a1de3ae19dba106e</sys_package>
+<sys_policy/>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>sys_script_client_0014099c3711200024d1973ebebe5dbe</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2025-02-07 19:27:03</sys_updated_on>
+<table>sysrule_quota</table>
+<type>onChange</type>
+<ui_type/>
+<view/>
+</sys_script_client>
+</xml>
